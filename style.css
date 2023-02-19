@@ -1,0 +1,128 @@
+html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #C0EEF2;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav{
+    color: #E9F8F9;
+}
+
+.container{
+    padding: 1rem 5rem;
+    background-color: #181823;
+    display: flex;
+    justify-content: space-between;
+}
+
+i{
+    font-size: 1.6rem;
+    color: #E9F8F9;
+    vertical-align:sub;
+}
+i:hover,
+a:hover{
+    color:#C0EEF2;
+}
+
+.fa-docker{
+    font-size: 3rem;
+}
+
+a{
+    text-decoration: none;
+    color: #E9F8F9;
+}
+
+p{
+    display: inline-block;
+}
+
+.link {
+    margin: 0 1rem;
+}
+
+.nav-right-items{
+    display: none;
+}
+
+.modal{
+    z-index: 5;
+    width: 30%;
+    height: 100vh;
+    padding: 1rem;
+    background-color: #537FE7;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+    display: none;
+    animation: slide forwards .5s ease-in;
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-header a .fa-xmark{
+    margin-top: 1rem;
+    font-size: 1.8rem;
+}
+
+.fa-xmark:hover{
+    transform: rotate(99990deg);
+    transition: all 10s ease-in;
+}
+
+
+@keyframes slide {
+    to{
+        opacity: 1;
+    }
+
+    from{
+        opacity: 0;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .container{
+        align-items: center;
+        padding: 0;
+    }
+
+    i{
+        font-size: 1rem;
+        vertical-align: middle;
+    }
+
+    .nav-left-items, .nav-center-items{
+        display: none;
+    }
+
+    .nav-right-items{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo {
+        padding: 1rem;
+    }
+
+    .link{
+        display: block;
+    }
+
+    .modal{
+        width: 90%;
+    }
+}
